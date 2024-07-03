@@ -1,4 +1,6 @@
 @mixin partners($pt, $pb, $w, $bc) {
+    display: flex;
+    justify-content: center;
     padding: $pt $pb;
     background-color: $bc;
 

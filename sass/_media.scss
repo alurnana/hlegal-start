@@ -1,0 +1,70 @@
+@media (min-width: 375px) {
+    .wrapper {
+        width: 375px;
+    }
+
+    .mobile-hidden {
+        display: none;
+    }
+
+    .services {
+        padding: 30px;
+
+        &_title {
+            width: 315px;
+
+                h2 {
+                    font-size: 30px;
+                    line-height: 36px;
+                }
+        }
+    }
+
+    .card {
+        width: 315px;
+    }
+
+    .clients_item {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        width: 768px;
+    }
+
+    .mobile-hidden {
+        display: flex;
+    }
+
+    .services {
+        padding: 60px;
+
+        &_title {
+            width: 648px;
+
+                h2 {
+                    font-size: 38px;
+                    line-height: 36px;
+                }
+        }
+    }
+
+    .card {
+        width: 294px;
+    }
+
+    .clients_item {
+        width: 256px;
+        padding: 0;
+
+        img {
+            margin: auto auto;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    
+}

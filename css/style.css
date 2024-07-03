@@ -39,7 +39,6 @@ li {
 }
 .services_title h2 {
   margin-top: 10px;
-  width: 70%;
   font-weight: 700;
   font-size: 38px;
   background: linear-gradient(90deg, rgb(240, 20, 90), rgb(239, 128, 128));
@@ -52,15 +51,16 @@ li {
   gap: 60px;
   flex-wrap: wrap;
 }
-.services .card {
+
+.card {
   width: 400px;
 }
-.services .card img {
+.card img {
   padding: 14px;
   background-color: rgb(255, 255, 255);
   border-radius: 24px;
 }
-.services .card h5 {
+.card h5 {
   margin-top: 30px;
   margin-bottom: 15px;
   font-weight: 700;
@@ -68,7 +68,7 @@ li {
   color: rgb(36, 163, 255);
   line-height: 27px;
 }
-.services .card p {
+.card p {
   font-size: 16px;
   line-height: 26px;
   color: rgb(255, 255, 255);
@@ -78,13 +78,15 @@ li {
   display: flex;
   flex-wrap: wrap;
   margin-top: 60px;
+  margin-bottom: 60px;
 }
 .clients_item {
-  padding: 20px;
   width: 360px;
   height: 120px;
 }
 .clients_hillel {
+  display: flex;
+  justify-content: center;
   padding: 36px 71px;
   background-color: rgb(28, 66, 128);
 }
@@ -92,6 +94,8 @@ li {
   width: 217px;
 }
 .clients_wannabiz {
+  display: flex;
+  justify-content: center;
   padding: 44px 80px;
   background-color: rgb(20, 54, 70);
 }
@@ -99,6 +103,8 @@ li {
   width: 199px;
 }
 .clients_tapgerine {
+  display: flex;
+  justify-content: center;
   padding: 38px 90px;
   background-color: rgb(244, 139, 48);
 }
@@ -106,6 +112,8 @@ li {
   width: 179px;
 }
 .clients_3dlook {
+  display: flex;
+  justify-content: center;
   padding: 39px 90px;
   background-color: rgb(158, 77, 195);
 }
@@ -113,6 +121,8 @@ li {
   width: 180px;
 }
 .clients_orangear {
+  display: flex;
+  justify-content: center;
   padding: 38px 93px;
   background-color: rgb(253, 147, 57);
 }
@@ -120,6 +130,8 @@ li {
   width: 174px;
 }
 .clients_adtelligent {
+  display: flex;
+  justify-content: center;
   padding: 36px 87px;
   background-color: rgb(226, 226, 228);
 }
@@ -127,6 +139,8 @@ li {
   width: 187px;
 }
 .clients_clickky {
+  display: flex;
+  justify-content: center;
   padding: 30px 111px;
   background-color: rgb(199, 28, 54);
 }
@@ -134,6 +148,8 @@ li {
   width: 138px;
 }
 .clients_eco-leasing {
+  display: flex;
+  justify-content: center;
   padding: 22px 107px;
   background-color: rgb(220, 243, 249);
 }
@@ -141,6 +157,8 @@ li {
   width: 146px;
 }
 .clients_infratek {
+  display: flex;
+  justify-content: center;
   padding: 30px 89px;
   background-color: rgb(234, 234, 234);
 }
@@ -148,6 +166,8 @@ li {
   width: 182px;
 }
 .clients_city-park {
+  display: flex;
+  justify-content: center;
   padding: 41px 90px;
   background-color: rgb(40, 34, 64);
 }
@@ -155,6 +175,8 @@ li {
   width: 181px;
 }
 .clients_artprint {
+  display: flex;
+  justify-content: center;
   padding: 37px 86px;
   background-color: rgb(29, 69, 104);
 }
@@ -162,11 +184,66 @@ li {
   width: 189px;
 }
 .clients_ultimatecard {
+  display: flex;
+  justify-content: center;
   padding: 13px 104px;
   background-color: rgb(0, 0, 0);
 }
 .clients_ultimatecard img {
   width: 182px;
+}
+
+@media (min-width: 375px) {
+  .wrapper {
+    width: 375px;
+  }
+  .mobile-hidden {
+    display: none;
+  }
+  .services {
+    padding: 30px;
+  }
+  .services_title {
+    width: 315px;
+  }
+  .services_title h2 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .card {
+    width: 315px;
+  }
+  .clients_item {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .wrapper {
+    width: 768px;
+  }
+  .mobile-hidden {
+    display: flex;
+  }
+  .services {
+    padding: 60px;
+  }
+  .services_title {
+    width: 648px;
+  }
+  .services_title h2 {
+    font-size: 38px;
+    line-height: 36px;
+  }
+  .card {
+    width: 294px;
+  }
+  .clients_item {
+    width: 256px;
+    padding: 0;
+  }
+  .clients_item img {
+    margin: auto auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
