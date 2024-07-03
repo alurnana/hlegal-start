@@ -1,0 +1,8 @@
+@mixin partners($pt, $pb, $w, $bc) {
+    padding: $pt $pb;
+    background-color: $bc;
+
+        img {
+            width: $w;
+        }
+}
