@@ -7,7 +7,7 @@
     padding: 60px;
 
     &_title {
-        p {
+        a {
             display: flex;
             align-items: center;
             gap: 2px;
@@ -15,6 +15,16 @@
             text-transform: uppercase;
             font-weight: 700;
             font-size: 14px;
+        }
+
+        .services_hover:hover {
+            a {
+                color: rgba(240, 20, 90, 1);
+            }
+
+            svg {
+                stroke:  rgba(240, 20, 90, 1);
+            }
         }
 
         h2 {

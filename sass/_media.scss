@@ -1,6 +1,7 @@
 @media (min-width: 375px) {
     .wrapper {
-        width: 375px;
+        max-width: 375px;
+        width: 100%;
     }
 
     .mobile-hidden {
@@ -11,60 +12,107 @@
         padding: 30px;
 
         &_title {
-            width: 315px;
+            max-width: 315px;
 
-                h2 {
-                    font-size: 30px;
-                    line-height: 36px;
-                }
+            h2 {
+                font-size: 30px;
+            }
+        }
+
+        &_cards {
+            margin-top: 30px;
+            gap: 30px;
         }
     }
 
-    .card {
-        width: 315px;
-    }
-
     .clients_item {
-        width: 100%;
+        max-width: 100%;
     }
 }
 
 @media (min-width: 768px) {
     .wrapper {
-        width: 768px;
+        max-width: 768px;
+        width: 100%;
     }
 
     .mobile-hidden {
-        display: flex;
+        display: inline-flex;
     }
 
     .services {
         padding: 60px;
 
         &_title {
-            width: 648px;
+            max-width: 650px;
+            margin-bottom: 60px;
 
-                h2 {
-                    font-size: 38px;
-                    line-height: 36px;
-                }
+            h2 {
+                font-size: 38px;
+            }
         }
     }
-
+    
     .card {
-        width: 294px;
+        max-width: 294px;
     }
 
     .clients_item {
-        width: 256px;
-        padding: 0;
+        max-width: 256px;
 
         img {
-            margin: auto auto;
+            width: 110%;
         }
     }
 }
 
 @media (min-width: 1024px) {
-    
+    .wrapper {
+        max-width: 1024px;
+        width: 100%;
+    }
+
+    .services_title {
+        max-width: 100%;
+    }
+
+    .services_cards {
+        gap: 60px;
+    }
+
+    .card {
+        max-width: 260px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .wrapper {
+        max-width: 1920px;
+        width: 100%;
+    }
+
+    .services_title {
+        margin: 0 160px 60px;
+    }
+
+    .services_cards {
+        padding: 0 160px;
+        justify-content: space-between;
+    }
+
+    .card {
+        max-width: 493px;
+    }
+
+    .clients {
+        margin: 60px 100px;
+    }
+
+    .clients_item {
+        max-width: 430px;
+
+        img {
+            width: 65%;
+        }
+    }
 }

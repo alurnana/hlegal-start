@@ -1,5 +1,3 @@
-@use  './mixins';
-
 .clients {
     display: flex;
     flex-wrap: wrap;
@@ -7,55 +5,66 @@
     margin-bottom: 60px;
 
     &_item {
-        width: 360px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 360px;
+        width: 100%;
         height: 120px;
+
+        img {
+            padding: 10px 50px;
+            width: 70%;
+        }
     }
+
 
     &_hillel {
-        @include mixins.partners(36px, 71px, 217px, rgba(28, 66, 128, 1));
+        background-color: rgba(28, 66, 128, 1);
     }
 
+
     &_wannabiz {
-        @include mixins.partners(44px, 80px, 199px, rgba(20, 54, 70, 1) );
+        background-color: rgba(20, 54, 70, 1);
     }
 
     &_tapgerine {
-        @include mixins.partners(38px, 90px, 179px, rgba(244, 139, 48, 1));
+        background-color: rgba(244, 139, 48, 1);
     }
 
     &_3dlook {
-        @include mixins.partners(39px, 90px, 180px, rgba(158, 77, 195, 1));
+        background-color: rgba(158, 77, 195, 1);
     }
 
     &_orangear {
-        @include mixins.partners(38px, 93px, 174px, rgba(253, 147, 57, 1));
+        background-color: rgba(253, 147, 57, 1);
     }
 
     &_adtelligent {
-        @include mixins.partners(36px, 87px, 187px, rgba(226, 226, 228, 1));
+        background-color: rgba(226, 226, 228, 1);
     }
     
     &_clickky {
-        @include mixins.partners(30px, 111px, 138px, rgba(199, 28, 54, 1));
+        background-color: rgba(199, 28, 54, 1);
     }
 
     &_eco-leasing {
-        @include mixins.partners(22px, 107px, 146px, rgba(220, 243, 249, 1));
+        background-color: rgba(220, 243, 249, 1);
     }
 
     &_infratek {
-        @include mixins.partners(30px, 89px, 182px, rgba(234, 234, 234, 1));
+        background-color: rgba(234, 234, 234, 1);
     }
 
     &_city-park {
-        @include mixins.partners(41px, 90px, 181px, rgba(40, 34, 64, 1));
+        background-color: rgba(40, 34, 64, 1);
     }
 
     &_artprint {
-        @include mixins.partners(37px, 86px, 189px, rgba(29, 69, 104, 1));
+        background-color: rgba(29, 69, 104, 1);
     }
 
     &_ultimatecard {
-        @include mixins.partners(13px, 104px, 182px, rgba(0, 0, 0, 1));
+        background-color: rgba(0, 0, 0, 1);
     }
 }

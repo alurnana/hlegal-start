@@ -21,3 +21,8 @@ li {
     margin: 0 auto;
     width: 1440px;
 }
+
+svg path {
+    stroke: inherit;
+    fill: inherit;
+}
