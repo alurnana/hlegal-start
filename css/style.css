@@ -18,8 +18,7 @@ li {
 }
 
 .wrapper {
-  margin: 0 auto;
-  width: 1440px;
+  width: 100%;
 }
 
 svg path {
@@ -32,6 +31,9 @@ svg path {
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
   padding: 60px;
+  margin-bottom: 60px;
+  width: 100%;
+  position: relative;
 }
 .services_title a {
   display: flex;
@@ -58,15 +60,35 @@ svg path {
 }
 .services_cards {
   margin-top: 60px;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 60px;
-  flex-wrap: wrap;
+}
+.services::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: 20px;
+  left: 20px;
+  z-index: 5;
+  height: 10px;
+  border-radius: 0 0 12px 12px;
+  background-color: #CACADB;
+}
+.services::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  right: 40px;
+  left: 40px;
+  z-index: 5;
+  height: 10px;
+  border-radius: 0 0 12px 12px;
+  background-color: #E7E7F2;
 }
 
-.card {
-  width: 400px;
-}
-.card img {
+.card .img_box {
+  display: inline-block;
   padding: 14px;
   background-color: rgb(255, 255, 255);
   border-radius: 24px;
@@ -86,92 +108,78 @@ svg path {
 }
 
 .clients {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 60px;
-  margin-bottom: 60px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 .clients_item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 360px;
-  width: 100%;
   height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .clients_item img {
-  padding: 10px 50px;
-  width: 70%;
+  width: 50%;
 }
-.clients_hillel {
+.clients_item:nth-child(1) {
   background-color: rgb(28, 66, 128);
 }
-.clients_wannabiz {
+.clients_item:nth-child(2) {
   background-color: rgb(20, 54, 70);
 }
-.clients_tapgerine {
+.clients_item:nth-child(3) {
   background-color: rgb(244, 139, 48);
 }
-.clients_3dlook {
+.clients_item:nth-child(4) {
   background-color: rgb(158, 77, 195);
 }
-.clients_orangear {
+.clients_item:nth-child(5) {
   background-color: rgb(253, 147, 57);
 }
-.clients_adtelligent {
+.clients_item:nth-child(6) {
   background-color: rgb(226, 226, 228);
 }
-.clients_clickky {
+.clients_item:nth-child(7) {
   background-color: rgb(199, 28, 54);
 }
-.clients_eco-leasing {
+.clients_item:nth-child(8) {
   background-color: rgb(220, 243, 249);
 }
-.clients_infratek {
+.clients_item:nth-child(9) {
   background-color: rgb(234, 234, 234);
 }
-.clients_city-park {
+.clients_item:nth-child(10) {
   background-color: rgb(40, 34, 64);
 }
-.clients_artprint {
+.clients_item:nth-child(11) {
   background-color: rgb(29, 69, 104);
 }
-.clients_ultimatecard {
+.clients_item:nth-child(12) {
   background-color: rgb(0, 0, 0);
 }
 
 @media (min-width: 375px) {
-  .wrapper {
-    max-width: 375px;
-    width: 100%;
-  }
   .mobile-hidden {
     display: none;
   }
   .services {
     padding: 30px;
   }
-  .services_title {
-    max-width: 315px;
-  }
-  .services_title h2 {
+  .services h2 {
     font-size: 30px;
   }
   .services_cards {
     margin-top: 30px;
+    grid-template-columns: repeat(1, 1fr);
     gap: 30px;
+    padding-bottom: 30px;
   }
-  .clients_item {
-    max-width: 100%;
+  .clients {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 @media (min-width: 768px) {
-  .wrapper {
-    max-width: 768px;
-    width: 100%;
-  }
   .mobile-hidden {
-    display: inline-flex;
+    display: flex;
   }
   .services {
     padding: 60px;
@@ -183,54 +191,48 @@ svg path {
   .services_title h2 {
     font-size: 38px;
   }
-  .card {
-    max-width: 294px;
+  .services_cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
   }
-  .clients_item {
-    max-width: 256px;
+  .clients {
+    grid-template-columns: repeat(3, 1fr);
   }
-  .clients_item img {
-    width: 110%;
+  .clients img {
+    width: 70%;
   }
 }
 @media (min-width: 1024px) {
-  .wrapper {
-    max-width: 1024px;
-    width: 100%;
-  }
   .services_title {
     max-width: 100%;
   }
   .services_cards {
+    grid-template-columns: repeat(3, 1fr);
     gap: 60px;
   }
-  .card {
-    max-width: 260px;
+  .clients {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .clients img {
+    width: 60%;
+  }
+}
+@media (min-width: 1440px) {
+  .clients_item img {
+    width: 50%;
   }
 }
 @media (min-width: 1920px) {
-  .wrapper {
-    max-width: 1920px;
-    width: 100%;
-  }
   .services_title {
     margin: 0 160px 60px;
   }
   .services_cards {
-    padding: 0 160px;
-    justify-content: space-between;
-  }
-  .card {
-    max-width: 493px;
+    margin: 0 160px;
   }
   .clients {
-    margin: 60px 100px;
-  }
-  .clients_item {
-    max-width: 430px;
-  }
-  .clients_item img {
-    width: 65%;
+    margin: 0 160px;
+    border-radius: 12px;
+    overflow: hidden;
   }
 }
 

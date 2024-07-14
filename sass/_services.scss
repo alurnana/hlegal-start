@@ -5,6 +5,9 @@
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
     padding: 60px;
+    margin-bottom: 60px;
+    width: 100%;
+    position: relative;
 
     &_title {
         a {
@@ -39,16 +42,40 @@
 
     &_cards {
         margin-top: 60px;
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         gap: 60px;
-        flex-wrap: wrap;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        right: 20px;
+        left: 20px;
+        z-index: 5;
+        height: 10px;
+        border-radius: 0 0 12px 12px;
+        background-color: #CACADB;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        right: 40px;
+        left: 40px;
+        z-index: 5;
+        height: 10px;
+        border-radius: 0 0 12px 12px;
+        background-color: #E7E7F2;
     }
 }
 
 .card {
-    width: 400px;
 
-    img {
+    .img_box {
+        display: inline-block;
         padding: 14px;
         background-color: colors.$basicWhite;
         border-radius: 24px;

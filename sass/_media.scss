@@ -1,9 +1,4 @@
 @media (min-width: 375px) {
-    .wrapper {
-        max-width: 375px;
-        width: 100%;
-    }
-
     .mobile-hidden {
         display: none;
     }
@@ -11,33 +6,26 @@
     .services {
         padding: 30px;
 
-        &_title {
-            max-width: 315px;
-
             h2 {
                 font-size: 30px;
             }
-        }
 
         &_cards {
             margin-top: 30px;
+            grid-template-columns: repeat(1, 1fr);
             gap: 30px;
+            padding-bottom: 30px;
         }
     }
 
-    .clients_item {
-        max-width: 100%;
+    .clients {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
 @media (min-width: 768px) {
-    .wrapper {
-        max-width: 768px;
-        width: 100%;
-    }
-
     .mobile-hidden {
-        display: inline-flex;
+        display: flex;
     }
 
     .services {
@@ -51,68 +39,62 @@
                 font-size: 38px;
             }
         }
-    }
-    
-    .card {
-        max-width: 294px;
+
+        &_cards {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+        }
     }
 
-    .clients_item {
-        max-width: 256px;
+    .clients {
+        grid-template-columns: repeat(3, 1fr);
 
         img {
-            width: 110%;
+            width: 70%;
         }
     }
 }
 
 @media (min-width: 1024px) {
-    .wrapper {
-        max-width: 1024px;
-        width: 100%;
-    }
-
     .services_title {
         max-width: 100%;
     }
 
     .services_cards {
+        grid-template-columns: repeat(3, 1fr);
         gap: 60px;
     }
 
-    .card {
-        max-width: 260px;
+    .clients {
+        grid-template-columns: repeat(4, 1fr);
+
+        img {
+            width: 60%;
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .clients_item {
+        img {
+            width: 50%;
+        }
     }
 }
 
 @media (min-width: 1920px) {
-    .wrapper {
-        max-width: 1920px;
-        width: 100%;
-    }
 
     .services_title {
         margin: 0 160px 60px;
     }
 
     .services_cards {
-        padding: 0 160px;
-        justify-content: space-between;
-    }
-
-    .card {
-        max-width: 493px;
+        margin: 0 160px;
     }
 
     .clients {
-        margin: 60px 100px;
-    }
-
-    .clients_item {
-        max-width: 430px;
-
-        img {
-            width: 65%;
-        }
+        margin: 0 160px;
+        border-radius: 12px;
+        overflow: hidden;
     }
 }
