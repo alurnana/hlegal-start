@@ -19,6 +19,7 @@ li {
 
 .wrapper {
   width: 100%;
+  margin: 0 auto;
 }
 
 svg path {
@@ -30,10 +31,16 @@ svg path {
   background: linear-gradient(-110deg, rgb(50, 50, 100), rgb(50, 50, 100), rgb(100, 62, 114));
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
-  padding: 60px;
   margin-bottom: 60px;
   width: 100%;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.services_title {
+  padding-top: 60px;
+  width: 100%;
 }
 .services_title a {
   display: flex;
@@ -109,6 +116,7 @@ svg path {
 
 .clients {
   display: grid;
+  margin: 0 auto;
   grid-template-columns: repeat(4, 1fr);
 }
 .clients_item {
@@ -161,19 +169,22 @@ svg path {
   .mobile-hidden {
     display: none;
   }
-  .services {
-    padding: 30px;
-  }
   .services h2 {
     font-size: 30px;
   }
+  .services_title {
+    padding-top: 30px;
+    max-width: 315px;
+  }
   .services_cards {
+    max-width: 315px;
     margin-top: 30px;
     grid-template-columns: repeat(1, 1fr);
     gap: 30px;
     padding-bottom: 30px;
   }
   .clients {
+    max-width: 375px;
     grid-template-columns: repeat(1, 1fr);
   }
 }
@@ -181,21 +192,21 @@ svg path {
   .mobile-hidden {
     display: flex;
   }
-  .services {
-    padding: 60px;
-  }
   .services_title {
-    max-width: 650px;
+    padding-top: 60px;
+    max-width: 648px;
     margin-bottom: 60px;
   }
   .services_title h2 {
     font-size: 38px;
   }
   .services_cards {
+    max-width: 648px;
     grid-template-columns: repeat(2, 1fr);
     gap: 60px;
   }
   .clients {
+    max-width: 768px;
     grid-template-columns: repeat(3, 1fr);
   }
   .clients img {
@@ -204,13 +215,15 @@ svg path {
 }
 @media (min-width: 1024px) {
   .services_title {
-    max-width: 100%;
+    max-width: 904px;
   }
   .services_cards {
+    max-width: 904px;
     grid-template-columns: repeat(3, 1fr);
     gap: 60px;
   }
   .clients {
+    max-width: 1024px;
     grid-template-columns: repeat(4, 1fr);
   }
   .clients img {
@@ -218,19 +231,28 @@ svg path {
   }
 }
 @media (min-width: 1440px) {
+  .services_cards,
+  .services_title {
+    max-width: 1320px;
+  }
+  .clients {
+    max-width: 1440px;
+  }
   .clients_item img {
     width: 50%;
   }
 }
 @media (min-width: 1920px) {
   .services_title {
+    width: 1600px;
     margin: 0 160px 60px;
   }
   .services_cards {
+    width: 1600px;
     margin: 0 160px;
   }
   .clients {
-    margin: 0 160px;
+    width: 1720px;
     border-radius: 12px;
     overflow: hidden;
   }
